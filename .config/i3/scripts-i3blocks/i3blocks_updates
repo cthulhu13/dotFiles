@@ -1,0 +1,17 @@
+#!/bin/sh
+
+
+# mouse middle triggers update
+case $BLOCK_BUTTON in
+	2) ~/.config/i3/scripts-i3blocks/updatePackages ;;
+esac
+
+
+# runs on the hour
+min=$(date "+%M")
+	if [ $min == 00 ]; then
+		~/.config/i3/scripts-i3blocks/syncPackages
+	else
+		echo $(pacman -Qu | sed "/^error:/ d" | wc -l) ⚙
+	fi
+

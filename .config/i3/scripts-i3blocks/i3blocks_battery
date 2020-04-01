@@ -1,0 +1,7 @@
+#!/bin/sh
+
+
+echo $(acpi | sed "s/Battery 0: //g;s/remaining//g" | awk '{ print $2 }' | sed "s/,//g")
+
+
+

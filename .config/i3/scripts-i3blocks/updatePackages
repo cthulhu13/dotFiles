@@ -1,0 +1,10 @@
+#!/bin/sh
+# subscript for i3blocks_updates
+
+
+echo update $(date)>> ~/.config/i3/scripts-i3blocks/synclog
+echo :: Starting full system upgrade...
+pkill -SIGRTMIN +9 i3blocks
+sudo rm /var/lib/pacman/db.lck
+sudo pacman -Syu --noconfirm > /dev/null
+

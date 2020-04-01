@@ -1,0 +1,42 @@
+#!/bin/sh
+
+DAY=$(date +%u)
+AMPM=$(date +%p)
+
+MON='1'
+TUE='2'
+WED='3'
+THUR='4'
+FRI='5'
+SAT='6'
+SUN='7'
+
+DY='曜'	
+	if [ $DAY == $MON ]; then
+		DY='月'
+	elif [ $DAY == $TUE ]; then
+		DY='火'
+	elif [ $DAY == $WED ]; then
+		DY='水'
+	elif [ $DAY == $THUR ]; then
+		DY='木'
+	elif [ $DAY == $FRI ]; then
+		DY='金'
+	elif [ $DAY == $SAT ]; then
+		DY='土'
+	elif [ $DAY == $SUN ]; then
+		DY='日'
+	else
+		DY='曜'
+	fi
+
+AP='午'
+	if [ $AMPM == 'AM' ]; then
+		AP='午前'
+	elif [ $AMPM == 'PM' ]; then
+		AP='午後'
+	fi
+
+
+echo $(date '+%Y年%m月%d日 ('$DY') %I:%M '$AP);
+

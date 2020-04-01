@@ -1,0 +1,10 @@
+#!/bin/sh
+# subscript for i3blocks_updates
+
+
+echo sync $(date)>> ~/.config/i3/scripts-i3blocks/synclog
+echo :: Synchronizing package databases...
+sudo rm /var/lib/pacman/db.lck
+sudo pacman -Syy > /dev/null
+
+
