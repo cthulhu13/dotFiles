@@ -84,8 +84,8 @@
 ### mod+Ctrl:                                                                                      ###
 ###                                                                                                ###
 ###		d                             move to workspace 龍                                         ###
-###		a                             move to workspace                                           ###
-###		p                             move to workspace 🏴‍☠️                                  ###
+###		a                             move to workspace                                          ###
+###		p                             move to workspace 🏴‍☠️                                       ###
 ###		v                             move to workspace 🖥                                         ###
 ###		o                             move to workspace 🧅                                         ###
 ###		m                             move to workspace 🎧                                         ###
@@ -167,8 +167,6 @@
 ##### #   Start a Terminal   # #####
 #==================================#
 
-#	bindsym $mod+Return                               exec gnome-terminal
-#	bindsym $mod+t                                    exec terminator
 	bindsym $mod+Return                               exec terminator
 
 
