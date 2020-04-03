@@ -154,7 +154,7 @@ call plug#end()
 	set shiftwidth=4
 
 " line wrapping
-	set wrap
+	set nowrap
 
 " Status bar
 	set laststatus=2
